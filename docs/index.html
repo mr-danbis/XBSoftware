@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание для компании XBSoftware</title>
+    <meta name="description" content="Тестовое задание для компании XBSoftware">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <main class="main">
+            
+            <section class="contact">
+    <div class="container">
+        <div class="contact__wrapper">
+            <div class="contact__info">
+                <h1 class="contact__title">
+                    <span>Get in touch</span> with our sales team
+                </h1>
+                <p class="contact__text">
+                    Fill out your information and a GanttPRO representative will reach out to you.
+                </p>
+                <div class="contact__list">
+                    <h3 class="contact__list-title">
+                        Contact us to learn more about:
+                    </h3>
+                    <ul>
+                        <li>Requesting a Demo</li>
+                        <li>Plans & Pricing</li>
+                        <li>Product Capabilities</li>
+                        <li>Business Solutions</li>
+                        <li>Software Integrations</li>
+                    </ul>
+                </div>
+                <div class="contact__banners">
+                    <div class="contact__banners-logos">
+                        <img src="images/banners/1.svg" alt="Banner logo">
+                        <img src="images/banners/2.svg" alt="Banner logo">
+                        <img src="images/banners/3.svg" alt="Banner logo">
+                        <img src="images/banners/4.svg" alt="Banner logo">
+                        <img src="images/banners/5.svg" alt="Banner logo">
+                        <img src="images/banners/6.svg" alt="Banner logo">
+                    </div>
+                    <div class="contact__banners-rating">
+                        <div class="contact__banners-stars">
+                            <img src="images/icons/star.svg" alt="Star icon">
+                            <img src="images/icons/star.svg" alt="Star icon">
+                            <img src="images/icons/star.svg" alt="Star icon">
+                            <img src="images/icons/star.svg" alt="Star icon">
+                            <img src="images/icons/star.svg" alt="Star icon">
+                        </div>
+                        <p class="contact__banners-text">
+                            based on <b>1000</b>+ reviews
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="form" action="">
+                <h2 class="form__title">Contact sales</h2>
+                <div class="form__group">
+                    <label class="form__label" for="fullname">Full name</label>
+                    <input class="form__input formInput" type="text" id="fullname" neme="fullname" placeholder="Please enter your name" required>
+                </div>
+
+                <div class="form__row">
+                    <div class="form__group">
+                        <label class="form__label" for="company">Company name</label>
+                        <input class="form__input formInput" type="text" id="company" name="company" placeholder="Please enter company name" required>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="email">Business email</label>
+                        <input class="form__input formInput" type="email" id="email" name="email" placeholder="name@company.com" required>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="phone">Business phone</label>
+                    <input class="form__input formInput" type="tel" id="phone" name="phone" placeholder="+1 555 655 5656" required>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="jobtitle">Your job title</label>
+                    <div class="form__select" id="jobtitle">
+                        <div>Select</div>
+                        <ul class="form__select-options">
+                            <li data-value="ceo">CEO / Executive</li>
+                            <li data-value="manager">Project Manager</li>
+                            <li data-value="director">Director</li>
+                            <li data-value="team_lead">Team Lead</li>
+                            <li data-value="other">Other</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="companysize">Company size</label>
+                    <div class="form__select" id="companysize">
+                        <div>Select</div>
+                        <ul class="form__select-options">
+                            <li data-value="1-10">1-10 employees</li>
+                            <li data-value="11-50">11-50 employees</li>
+                            <li data-value="51-200">51-200 employees</li>
+                            <li data-value="201-500">201-500 employees</li>
+                            <li data-value="501+">501+ employees</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="message">What would you like to discuss?</label>
+                    <textarea class="form__input formInput formInput form__textarea" id="message" name="message" placeholder="Tell us about your team and projects you'd like to implement with GanttPRO" required></textarea>
+                </div>
+
+                <div class="form__terms">
+                    <input class="formInput" type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">
+                        I have read and agree to GanttPRO's 
+                        <a class="link" href="">Terms of service</a> and
+                        <a class="link" href="">Privacy policy</a>
+                    </label>
+                </div>
+
+                <button class="form__btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+            <!-- /.form -->
+            
+        </main>
+        <!-- /.main -->
+        
+        <section class="modal">
+    <button class="modal__btn">
+        <img src="images/icons/cross.svg" alt="Close modal button">
+    </button>
+    <h2 class="modal__title">
+        Thank you for reaching out!
+    </h2>
+    <p class="modal__text">
+        We will be in touch with you shortly.
+    </p>
+</section>
+        <!-- /.modal -->
+
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
