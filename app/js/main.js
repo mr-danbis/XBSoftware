@@ -62,9 +62,29 @@ let sendForm = () => {
             }
         });
     });
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        openModal();
+    });
+}
+
+let openModal = () => {
+    let modal = document.querySelector('.modal');
+    modal.style.display = 'block';
+}
+
+let closeModal = () => {
+    let modal = document.querySelector('.modal');
+    let closeBTN = modal.querySelector('button');
+    
+    closeBTN.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     openSelectList();
     sendForm();
+    closeModal();
 });

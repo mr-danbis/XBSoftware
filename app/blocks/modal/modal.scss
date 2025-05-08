@@ -1,0 +1,41 @@
+.modal {
+    display: none;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    @include adaptive-padding(80, 40);
+    background-image: url(../images/modal-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &__title {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        @include adaptive-font(24, 12);
+        font-weight: 700;
+        line-height: 28px;
+        @include adaptive-marginBottom(15, 7);
+    }
+
+    &__text {
+        text-align: center;
+        color: rgb(194, 218, 255);
+        @include adaptive-font(16, 8);
+        font-weight: 400;
+        line-height: 30px;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 26px;
+        right: 30px;
+    }
+}
+
+@supports (background-image: url(../images/modal-bg.webp)) {
+    .modal {
+        background-image: url(../images/modal-bg.webp);
+    }
+}
