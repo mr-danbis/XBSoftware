@@ -164,9 +164,8 @@
                 color: rgb(221, 54, 54);
                 @include adaptive-font(14, 7);
                 font-weight: 400;
-                @include adaptive-lineHeight(30, 15);
-                bottom: -28px;
                 left: 0;
+                display: contents;
             }
         }
     }

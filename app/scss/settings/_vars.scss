@@ -88,5 +88,5 @@ $minWidth: 320;
 @mixin adaptive-lineHeight($pcValue, $mobValue) {
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
-   line-height: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
+    line-height: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
