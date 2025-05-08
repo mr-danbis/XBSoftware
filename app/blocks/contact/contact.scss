@@ -7,10 +7,22 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+
+        &.visible {
+            opacity: 1;
+        }
     }
 
     &__info {
+        transform: translateX(-200%);
+        transition: transform 0.5s ease-in-out;
         width: 40%;
+
+        &.visible {
+            transform: translateX(0);
+        }
     }
 
     &__title {
@@ -115,6 +127,8 @@
 }
 
 .form {
+    transform: translateX(200%);
+    transition: transform 0.5s ease-in-out;
     width: 50%;
     @include adaptive-paddingTop(48, 24);
     @include adaptive-paddingBottom(48, 24);
@@ -124,6 +138,10 @@
     border-radius: 20px;
     backdrop-filter: blur(50px);
     background: rgba(78, 149, 255, 0.1);
+
+    &.visible {
+        transform: translateX(0);
+    }
 
     &__title {
         @include adaptive-font(32, 16);

@@ -83,7 +83,15 @@ let closeModal = () => {
     });
 }
 
+let animateAfterLoaded = () => {
+    document.querySelector('.contact__wrapper').classList.add('visible');
+    document.querySelector('.contact__info').classList.add('visible');
+    document.querySelector('.form').classList.add('visible');
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
+    animateAfterLoaded()
     openSelectList();
     sendForm();
     closeModal();
