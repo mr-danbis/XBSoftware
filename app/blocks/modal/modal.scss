@@ -1,10 +1,10 @@
 .modal {
-    display: none;
+    // display: none;
     border-radius: 20px;
     position: fixed;
     top: 50%;
     left: 50%;
-    border: 2px solid rgba(178, 209, 255, 0.1),;
+    border: 2px solid rgba(178, 209, 255, 0.1), ;
     transform: translateX(-50%) translateY(-50%);
     @include adaptive-padding(80);
     background-image: url(../images/modal-bg.png);
@@ -17,13 +17,13 @@
         @include adaptive-font(24);
         font-weight: 700;
         @include adaptive-lineHeight(28);
-        @include adaptive-marginBottom(1);
+        @include adaptive-marginBottom(8);
     }
 
     &__text {
         text-align: center;
         color: rgb(194, 218, 255);
-        @include adaptive-font(1);
+        @include adaptive-font(16);
         font-weight: 400;
         @include adaptive-lineHeight(30);
     }
@@ -38,17 +38,16 @@
 @supports (background-image: url(../images/modal-bg.webp)) {
     .modal {
         background-image: url(../images/modal-bg.webp);
+
+        &__btn {
+            top: 20px;
+            right: 20px;
+        }
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 500px) {
     .modal {
-        width: 70vw;
-    }
-}
-
-@media (max-width: 400px) {
-    .modal {
-        width: 90vw;
+        width: 80vw;
     }
 }
