@@ -6,7 +6,7 @@
     left: 50%;
     border: 2px solid rgba(178, 209, 255, 0.1),;
     transform: translateX(-50%) translateY(-50%);
-    @include adaptive-padding(80, 50);
+    @include adaptive-padding(80);
     background-image: url(../images/modal-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,18 +14,18 @@
     &__title {
         text-align: center;
         color: rgb(255, 255, 255);
-        @include adaptive-font(24, 12);
+        @include adaptive-font(24);
         font-weight: 700;
-        @include adaptive-lineHeight(28, 14);
-        @include adaptive-marginBottom(15, 7);
+        @include adaptive-lineHeight(28);
+        @include adaptive-marginBottom(1);
     }
 
     &__text {
         text-align: center;
         color: rgb(194, 218, 255);
-        @include adaptive-font(16, 8);
+        @include adaptive-font(1);
         font-weight: 400;
-        @include adaptive-lineHeight(30, 15);
+        @include adaptive-lineHeight(30);
     }
 
     &__btn {

@@ -1,6 +1,6 @@
 .contact {
-    @include adaptive-paddingTop(30, 15);
-    @include adaptive-paddingBottom(30, 15);
+    @include adaptive-paddingTop(30);
+    @include adaptive-paddingBottom(30);
     width: 100%;
 
     &__wrapper {
@@ -18,7 +18,7 @@
     &__info {
         transform: translateX(-200%);
         transition: transform 0.5s ease-in-out;
-        width: 40%;
+        width: 48%;
 
         &.visible {
             transform: translateX(0);
@@ -27,11 +27,11 @@
 
     &__title {
         width: 87%;
-        @include adaptive-font(56, 28);
+        @include adaptive-font(56);
         font-weight: 700;
-        @include adaptive-lineHeight(56, 28);
+        @include adaptive-lineHeight(56);
         text-align: left;
-        @include adaptive-marginBottom(40, 20);
+        @include adaptive-marginBottom(40);
 
         span {
             color: #4E95FF;
@@ -40,21 +40,21 @@
 
     &__text {
         width: 87%;
-        @include adaptive-font(24, 12);
+        @include adaptive-font(24);
         font-weight: 400;
-        @include adaptive-lineHeight(36, 18);
-        @include adaptive-marginBottom(64, 32);
+        @include adaptive-lineHeight(36);
+        @include adaptive-marginBottom(64);
     }
 
     &__list {
-        @include adaptive-marginBottom(80, 40);
+        @include adaptive-marginBottom(80);
 
         &-title {
             color: rgb(178, 209, 255);
-            @include adaptive-font(20, 10);
+            @include adaptive-font(20);
             font-weight: 700;
-            @include adaptive-lineHeight(28, 14);
-            @include adaptive-marginBottom(24, 12);
+            @include adaptive-lineHeight(28);
+            @include adaptive-marginBottom(24);
         }
 
         ul {
@@ -62,16 +62,16 @@
         }
 
         li:not(:last-child) {
-            @include adaptive-marginBottom(8, 4);
+            @include adaptive-marginBottom(8);
         }
 
         li {
             padding-left: 40px;
             color: rgb(178, 209, 255);
             font-family: Inter;
-            @include adaptive-font(16, 8);
+            @include adaptive-font(16);
             font-weight: 500;
-            @include adaptive-lineHeight(30, 15);
+            @include adaptive-lineHeight(30);
             position: relative;
         }
 
@@ -95,7 +95,7 @@
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 8px;
             grid-row-gap: 16px;
-            @include adaptive-marginBottom(24, 12);
+            @include adaptive-marginBottom(24);
         }
 
         &-rating {
@@ -105,23 +105,23 @@
 
         &-stars {
             display: flex;
-            @include adaptive-marginRight(24, 12);
+            @include adaptive-marginRight(24);
 
             img {
                 width: 16px;
                 height: 16px;
 
                 &:not(:last-child) {
-                    @include adaptive-marginRight(8, 4);
+                    @include adaptive-marginRight(8);
                 }
             }
         }
 
         &-text {
             font-family: Inter;
-            @include adaptive-font(12, 6);
+            @include adaptive-font(12);
             font-weight: 400;
-            @include adaptive-lineHeight(24, 12);
+            @include adaptive-lineHeight(24);
         }
     }
 }
@@ -130,10 +130,10 @@
     transform: translateX(200%);
     transition: transform 0.5s ease-in-out;
     width: 50%;
-    @include adaptive-paddingTop(48, 24);
-    @include adaptive-paddingBottom(48, 24);
-    @include adaptive-paddingLeft(64, 32);
-    @include adaptive-paddingRight(64, 32);
+    @include adaptive-paddingTop(48);
+    @include adaptive-paddingBottom(48);
+    @include adaptive-paddingLeft(64);
+    @include adaptive-paddingRight(64);
     border: 2px solid rgba(178, 209, 255, 0.1), ;
     border-radius: 20px;
     backdrop-filter: blur(50px);
@@ -144,17 +144,17 @@
     }
 
     &__title {
-        @include adaptive-font(32, 16);
+        @include adaptive-font(32);
         text-align: center;
         font-weight: 700;
-        @include adaptive-lineHeight(42, 21);
-        @include adaptive-marginBottom(40, 20);
+        @include adaptive-lineHeight(42);
+        @include adaptive-marginBottom(40);
     }
 
     &__group {
         display: flex;
         flex-direction: column;
-        @include adaptive-marginBottom(20, 10);
+        @include adaptive-marginBottom(20);
         position: relative;
 
         &:has(.invalid) {
@@ -162,7 +162,7 @@
                 position: absolute;
                 content: 'This field is required';
                 color: rgb(221, 54, 54);
-                @include adaptive-font(14, 7);
+                @include adaptive-font(14);
                 font-weight: 400;
                 left: 0;
                 display: contents;
@@ -171,7 +171,7 @@
     }
 
     &__row {
-        @include adaptive-marginBottom(20, 10);
+        @include adaptive-marginBottom(20);
         display: flex;
         justify-content: space-between;
 
@@ -186,9 +186,9 @@
     &__label {
         color: rgb(178, 209, 255);
         font-family: Lato;
-        @include adaptive-font(14, 7);
+        @include adaptive-font(14);
         font-weight: 400;
-        @include adaptive-lineHeight(30, 15);
+        @include adaptive-lineHeight(30);
         margin-bottom: 5px;
     }
 
@@ -196,18 +196,18 @@
         border: 1px solid rgb(87, 108, 145);
         border-radius: 8px;
         background: rgb(26, 41, 71);
-        @include adaptive-padding(12, 6);
+        @include adaptive-padding(12);
         color: #fff;
-        @include adaptive-font(14, 7);
+        @include adaptive-font(14);
         font-weight: 400;
-        @include adaptive-lineHeight(20, 10);
+        @include adaptive-lineHeight(20);
         transition: all .3s;
         
         &::placeholder {
             color: rgb(117, 142, 181);
-            @include adaptive-font(14, 7);
+            @include adaptive-font(14);
             font-weight: 400;
-            @include adaptive-lineHeight(20, 10);
+            @include adaptive-lineHeight(20);
         }
 
         &.invalid {
@@ -253,12 +253,12 @@
             border: 1px solid rgb(87, 108, 145);
             border-radius: 8px;
             background: rgb(26, 41, 71);
-            @include adaptive-padding(12, 6);
+            @include adaptive-padding(12);
             color: rgb(117, 142, 181);
             font-family: Lato;
-            @include adaptive-font(14, 7);
+            @include adaptive-font(14);
             font-weight: 400;
-            @include adaptive-lineHeight(20, 10);
+            @include adaptive-lineHeight(20);
             cursor: pointer;
 
             &::after {
@@ -282,9 +282,9 @@
 
             li {
                 color: rgb(178, 209, 255);
-                @include adaptive-font(14, 7);
+                @include adaptive-font(14);
                 font-weight: 400;
-                @include adaptive-lineHeight(20, 10);
+                @include adaptive-lineHeight(20);
                 cursor: pointer;
                 padding: 8px 16px 8px 24px;
                 border-radius: 8px;
@@ -308,8 +308,8 @@
     }
 
     &__terms {
-        @include adaptive-marginTop(32, 16);
-        @include adaptive-marginBottom(40, 20);
+        @include adaptive-marginTop(32);
+        @include adaptive-marginBottom(40);
 
         input {
             opacity: 0;
@@ -325,13 +325,14 @@
         }
 
         label {
+            display: block;
             position: relative;
             cursor: pointer;
             padding-left: 28px;
             color: #B2D1FF;
-            @include adaptive-font(12, 6);
+            @include adaptive-font(12);
             font-weight: 400;
-            @include adaptive-lineHeight(18, 9);
+            @include adaptive-lineHeight(18);
 
             a {
                 color: #4E95FF;
@@ -357,9 +358,9 @@
         border-radius: 8px;
         background: rgb(78, 149, 255);
         color: rgb(255, 255, 255);
-        @include adaptive-font(16, 8);
+        @include adaptive-font(16);
         font-weight: 700;
-        @include adaptive-lineHeight(20, 10);
+        @include adaptive-lineHeight(20);
         transition: all .3s;
 
         &:hover {
@@ -376,22 +377,30 @@
     }
 }
 
-@media (max-width: 1300px) {
-    .contact{
-        &__info {
-            width: 48%;
+@media (max-width: 1200px) {
+    .form{
+        &__row {
+            flex-direction: column;
+            margin-bottom: 0;
+
+            & .form__group {
+                width: 100%;
+                @include adaptive-marginBottom(20);
+            }
         }
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 900px) {
     .contact {
         &__wrapper {
             flex-direction: column;
         }
 
         &__title, &__text {
-            width: 100%;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
             text-align: center;
         }
 
@@ -401,7 +410,7 @@
         }
 
         &__list, &__banners {
-            width: 40%;
+            width: 300px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -435,15 +444,11 @@
 
 @media (max-width: 600px) {
     .contact {
-        &__list, &__banners {
-            width: 50%;
-        }
-
         &__banners{
             &-logos {
                 img {
                     margin: auto;
-                    @include adaptive-width(60, 50);
+                    @include adaptive-width(60);
                 }
             }
         }
@@ -455,6 +460,10 @@
                 &::after {
                     transform: translateY(-50%) scale(0.5);
                 }
+            }
+
+            &.active div::after{
+                transform: rotate(180deg) translateY(50%) scale(0.5);
             }
         }
     }
@@ -468,6 +477,10 @@
     }
     
     .contact {
+        &__title, &__text {
+            width: 100%;
+        }
+
         &__banners {
             width: 70%;
 
@@ -475,9 +488,13 @@
                 justify-content: center;
             }
         }
+    }
+}
 
-        &__list {
-            width: 70%;
+@media (max-width: 370px) {
+    .contact {
+        &__banners, &__list {
+            width: 100%;
         }
     }
 }

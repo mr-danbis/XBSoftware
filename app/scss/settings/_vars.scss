@@ -1,91 +1,107 @@
 $maxWidth: 1366;
 $minWidth: 320;
+$difference: 1.25;
 
-@mixin adaptive-font($pcValue, $mobValue) {
+@mixin adaptive-font($pcValue) {
+    $mobValue: $pcValue/$difference;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     font-size: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-width($pcValue, $mobValue) {
+@mixin adaptive-width($pcValue) {
+    $mobValue: $pcValue/$difference;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     width: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-height($pcValue, $mobValue) {
+@mixin adaptive-height($pcValue) {
+    $mobValue: $pcValue/$difference;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     height: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-padding($pcValue, $mobValue) {
+@mixin adaptive-padding($pcValue) {
+    $mobValue: $pcValue/2.2;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     padding: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-paddingRight($pcValue, $mobValue) {
+@mixin adaptive-paddingRight($pcValue) {
+    $mobValue: $pcValue/2.2;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     padding-right: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-paddingLeft($pcValue, $mobValue) {
+@mixin adaptive-paddingLeft($pcValue) {
+    $mobValue: $pcValue/2.2;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     padding-left: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-paddingTop($pcValue, $mobValue) {
+@mixin adaptive-paddingTop($pcValue) {
+    $mobValue: $pcValue/2.2;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     padding-top: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-paddingBottom($pcValue, $mobValue) {
+@mixin adaptive-paddingBottom($pcValue) {
+    $mobValue: $pcValue/2.2;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     padding-bottom: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-margin($pcValue, $mobValue) {
+@mixin adaptive-margin($pcValue) {
+    $mobValue: $pcValue/$difference;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     margin: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-marginRight($pcValue, $mobValue) {
+@mixin adaptive-marginRight($pcValue) {
+    $mobValue: $pcValue/$difference;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     margin-right: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-marginLeft($pcValue, $mobValue) {
+@mixin adaptive-marginLeft($pcValue) {
+    $mobValue: $pcValue/$difference;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     margin-left: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-marginTop($pcValue, $mobValue) {
+@mixin adaptive-marginTop($pcValue) {
+    $mobValue: $pcValue/$difference;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     margin-top: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-marginBottom($pcValue, $mobValue) {
+@mixin adaptive-marginBottom($pcValue) {
+    $mobValue: $pcValue/$difference;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     margin-bottom: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-gridGap($pcValue, $mobValue) {
+@mixin adaptive-gridGap($pcValue) {
+    $mobValue: $pcValue/$difference;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     grid-gap: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
-@mixin adaptive-lineHeight($pcValue, $mobValue) {
+@mixin adaptive-lineHeight($pcValue) {
+    $mobValue: $pcValue/$difference;
     $addSize: $pcValue - $mobValue;
     $differenceWidth: $maxWidth - $minWidth;
     line-height: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
