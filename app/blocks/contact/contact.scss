@@ -26,7 +26,7 @@
     }
 
     &__title {
-        width: 80%;
+        width: 87%;
         @include adaptive-font(56, 28);
         font-weight: 700;
         @include adaptive-lineHeight(56, 28);
@@ -39,7 +39,7 @@
     }
 
     &__text {
-        width: 80%;
+        width: 87%;
         @include adaptive-font(24, 12);
         font-weight: 400;
         @include adaptive-lineHeight(36, 18);
