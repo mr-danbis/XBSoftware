@@ -4,18 +4,19 @@
     position: fixed;
     top: 50%;
     left: 50%;
+    border: 2px solid rgba(178, 209, 255, 0.1),;
     transform: translateX(-50%) translateY(-50%);
-    @include adaptive-padding(80, 40);
+    @include adaptive-padding(80, 50);
     background-image: url(../images/modal-bg.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 
     &__title {
         text-align: center;
         color: rgb(255, 255, 255);
         @include adaptive-font(24, 12);
         font-weight: 700;
-        line-height: 28px;
+        @include adaptive-lineHeight(28, 14);
         @include adaptive-marginBottom(15, 7);
     }
 
@@ -24,7 +25,7 @@
         color: rgb(194, 218, 255);
         @include adaptive-font(16, 8);
         font-weight: 400;
-        line-height: 30px;
+        @include adaptive-lineHeight(30, 15);
     }
 
     &__btn {
@@ -37,5 +38,17 @@
 @supports (background-image: url(../images/modal-bg.webp)) {
     .modal {
         background-image: url(../images/modal-bg.webp);
+    }
+}
+
+@media (max-width: 650px) {
+    .modal {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal {
+        width: 90vw;
     }
 }
