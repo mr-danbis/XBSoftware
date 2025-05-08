@@ -1,0 +1,347 @@
+.contact {
+    @include adaptive-paddingTop(80, 40);
+    @include adaptive-paddingBottom(100, 50);
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__info {
+        width: 40%;
+    }
+
+    &__title {
+        width: 80%;
+        @include adaptive-font(56, 28);
+        font-weight: 700;
+        line-height: 110%;
+        text-align: left;
+        @include adaptive-marginBottom(40, 20);
+
+        span {
+            color: #4E95FF;
+        }
+    }
+
+    &__text {
+        width: 80%;
+        @include adaptive-font(24, 12);
+        font-weight: 400;
+        line-height: 36px;
+        @include adaptive-marginBottom(64, 32);
+    }
+
+    &__list {
+        @include adaptive-marginBottom(80, 40);
+
+        &-title {
+            color: rgb(178, 209, 255);
+            @include adaptive-font(20, 10);
+            font-weight: 700;
+            line-height: 28px;
+            @include adaptive-marginBottom(24, 12);
+        }
+
+        ul {
+            padding-left: 0;
+        }
+
+        li:not(:last-child) {
+            @include adaptive-marginBottom(8, 4);
+        }
+
+        li {
+            padding-left: 40px;
+            color: rgb(178, 209, 255);
+            font-family: Inter;
+            @include adaptive-font(16, 8);
+            font-weight: 500;
+            line-height: 30px;
+            position: relative;
+        }
+
+        li::before {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 0;
+            content: url(../images/icons/checkbox.svg);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__banners {
+        width: max-content;
+
+        &-logos {
+            width: 244px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 8px;
+            grid-row-gap: 16px;
+            @include adaptive-marginBottom(24, 12);
+        }
+
+        &-rating {
+            display: flex;
+            align-items: center;
+        }
+
+        &-stars {
+            display: flex;
+            @include adaptive-marginRight(24, 12);
+
+            img {
+                width: 16px;
+                height: 16px;
+
+                &:not(:last-child) {
+                    @include adaptive-marginRight(8, 4);
+                }
+            }
+        }
+
+        &-text {
+            font-family: Inter;
+            @include adaptive-font(12, 6);
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+}
+
+.form {
+    width: 50%;
+    @include adaptive-paddingTop(48, 24);
+    @include adaptive-paddingBottom(48, 24);
+    @include adaptive-paddingLeft(64, 32);
+    @include adaptive-paddingRight(64, 32);
+    border: 2px solid rgba(178, 209, 255, 0.1), ;
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
+    background: rgba(78, 149, 255, 0.1);
+
+    &__title {
+        @include adaptive-font(32, 16);
+        text-align: center;
+        font-weight: 700;
+        line-height: 42px;
+        @include adaptive-marginBottom(40, 20);
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        @include adaptive-marginBottom(20, 10);
+    }
+
+    &__row {
+        @include adaptive-marginBottom(20, 10);
+        display: flex;
+        justify-content: space-between;
+
+        .form {
+            &__group {
+                width: 48%;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__label {
+        color: rgb(178, 209, 255);
+        font-family: Lato;
+        @include adaptive-font(14, 7);
+        font-weight: 400;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+
+    &__input {
+        border: 1px solid rgb(87, 108, 145);
+        border-radius: 8px;
+        background: rgb(26, 41, 71);
+        @include adaptive-padding(12, 6);
+        color: #fff;
+        transition: all .3s;
+
+        &::placeholder {
+            color: rgb(117, 142, 181);
+            font-family: Lato;
+            @include adaptive-font(14, 7);
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        &.invalid {
+            border: 1px solid rgb(221, 54, 54);
+        }
+    }
+
+    &__textarea {
+        min-height: 96px;
+    }
+
+    &__select {
+
+        &.active {
+            div {
+                border: 1px solid rgb(78, 149, 255);
+                box-shadow: 0px 0px 20px 2px rgba(78, 149, 255, 0.25);
+
+                &::after {
+                    transform: rotate(180deg) translateY(30%);
+                }
+            }
+        }
+
+        &.selected {
+            div {
+                color: #fff;
+            }
+        }
+
+        &.invalid div{
+            border: 1px solid rgb(221, 54, 54);
+        }
+
+        div {
+            transition: all .3s;
+            position: relative;
+            border: 1px solid rgb(87, 108, 145);
+            border-radius: 8px;
+            background: rgb(26, 41, 71);
+            @include adaptive-padding(12, 6);
+            color: rgb(117, 142, 181);
+            font-family: Lato;
+            @include adaptive-font(14, 7);
+            font-weight: 400;
+            line-height: 20px;
+            cursor: pointer;
+
+            &::after {
+                position: absolute;
+                content: url(../images/icons/arrow.svg);
+                right: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: all .3s;
+            }
+        }
+
+        &-options {
+            margin-top: 4px;
+            border: 1px solid rgba(178, 209, 255, 0.4);
+            border-radius: 8px;
+            box-shadow: 0px 8px 20px 0px rgba(78, 149, 255, 0.1);
+            background: rgb(26, 41, 71);
+            padding: 8px !important;
+            display: none;
+
+            li {
+                color: rgb(178, 209, 255);
+                @include adaptive-font(14, 7);
+                font-weight: 400;
+                line-height: 20px;
+                cursor: pointer;
+                padding: 8px 16px 8px 24px;
+                border-radius: 8px;
+                transition: all .3s;
+                position: relative;
+
+                &:hover {
+                    background: rgb(49, 66, 99);
+                }
+
+                &.active {
+                    &::before {
+                        position: absolute;
+                        content: url(../images/icons/checked.svg);
+                        left: 5px;
+                        top: 7px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__terms {
+        @include adaptive-marginTop(32, 16);
+        @include adaptive-marginBottom(40, 20);
+
+        input {
+            opacity: 0;
+            position: absolute;
+
+            &:checked+label::before{
+                content: url(../images/icons/checked-input.svg);
+            }
+
+            &.invalid+label::before{
+                content: url(../images/icons/errorChecked.svg);
+            }
+        }
+
+        label {
+            position: relative;
+            cursor: pointer;
+            padding-left: 28px;
+            color: #B2D1FF;
+            @include adaptive-font(12, 6);
+            font-weight: 400;
+            line-height: 18px;
+
+            a {
+                color: #4E95FF;
+            }
+
+            &::before{
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                content: url(../images/icons/noCheched.svg);
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__btn {
+        padding: 14px 0;
+        width: 266px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 8px;
+        background: rgb(78, 149, 255);
+        color: rgb(255, 255, 255);
+        @include adaptive-font(16, 8);
+        font-weight: 700;
+        line-height: 20px;
+        transition: all .3s;
+
+        &:hover {
+            box-shadow: 0px 0px 20px 2px rgba(78, 149, 255, 0.25);
+        }
+
+        &:active{
+            background: rgb(55, 121, 220);
+        }
+
+        &:disabled {
+            opacity: 0.75;
+        }
+    }
+}
+
+@supports (background-image: url(../images/background.webp)) {
+    .contact {
+        background-image: url(../images/background.webp);
+    }
+}
