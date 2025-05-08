@@ -1,9 +1,7 @@
 .contact {
-    @include adaptive-paddingTop(80, 40);
-    @include adaptive-paddingBottom(100, 50);
-    background-image: url(../images/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include adaptive-paddingTop(30, 15);
+    @include adaptive-paddingBottom(30, 15);
+    width: 100%;
 
     &__wrapper {
         display: flex;
@@ -351,11 +349,5 @@
         &:disabled {
             opacity: 0.75;
         }
-    }
-}
-
-@supports (background-image: url(../images/background.webp)) {
-    .contact {
-        background-image: url(../images/background.webp);
     }
 }

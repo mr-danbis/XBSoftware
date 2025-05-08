@@ -11,10 +11,21 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@supports (background-image: url(../images/background.webp)) {
+    .wrapper {
+        background-image: url(../images/background.webp);
+    }
 }
 
 .main {
     flex: 1 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 .container {
